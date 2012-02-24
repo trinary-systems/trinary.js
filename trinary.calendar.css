@@ -1,0 +1,178 @@
+.calendar-params {
+    margin: 0 0 3em;
+    }
+
+.calendar {
+    }
+    .calendar .year {
+        padding: 0 1em 0 0;
+        color: #f50;
+        font-size: 3em;
+        margin: 0 0 0.5em;
+        }
+    .calendar .month {
+        display: inline-block;
+        margin: 0 10px 20px 0;
+        vertical-align: top;
+        }
+        .calendar .month-name {
+            margin: 0 0 0.3em;
+            padding-left: 0.3em;
+            font-size: 1.2em;
+            color: #888a85;
+            }
+    .calendar .day {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        }
+    .calendar.trinary .day-names .day,
+    .calendar.nonary .day-names .day {
+        background: none;
+        border: 0.1em solid #f5f5f5;
+        -moz-border-radius: 0.3em;
+        font-size: 0.8em;
+        width: 3.625em;
+        margin-right: 0.15em;
+        color: #888a85;
+        }
+    .calendar var {
+        display: inline-block;
+        vertical-align: top;
+        font-style: normal;
+        font-family: Monaco, DejaVu Sans Mono, Courier New, monospace;
+        text-transform: uppercase;
+        color: #555753;
+        }
+        .calendar.trinary .holyday var,
+        .calendar.nonary .holyday var {
+            color: #FF4A08;
+            }
+        .calendar.trinary .highlight,
+        .calendar.nonary .highlight {
+            background: #FF4A08;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            }
+        .calendar.trinary .highlight var,
+        .calendar.nonary .highlight var {            
+            color: #fff;            
+            }
+
+
+.calendar.nonary {}
+    .calendar.nonary .day-names .day {
+        width: 2.3em;
+        line-height: 1.2em;
+        }
+    .calendar.nonary .day {
+        width: 2em;
+        height: 1.2em;
+        margin: 0 0.1em 0.1em 0;
+        }
+
+.calendar.trinary {}
+    .calendar.trinary .day {
+        width: 2.9em;
+        margin: 0 0.3em 0.1em 0;
+        }
+    .calendar.trinary .day-names .day {
+        height:1.2em;
+        line-height:1.2em;
+        }
+    .calendar.trinary var {
+        width: 0.6em;
+        text-align: center;
+        }
+        .calendar.trinary var.zero {
+            width: 0.75em;
+            font-size: 0.8em;
+            margin-bottom: -0.1em;
+            padding-top: 0.1em;
+            }
+
+
+.calendar.trinary.triangle {
+    line-height: 0;
+    }
+    .calendar.trinary.triangle .month {
+        margin: 0 10px 20px 0;
+        }
+        .calendar.trinary.triangle .month.even {
+            }
+    .calendar.trinary.triangle .week {
+        }
+    .calendar.trinary.triangle .day {
+        overflow: hidden;
+        display: inline-block;
+        width: 40px;
+        margin: 0 1px 1px 0;
+        line-height: 0;
+        height: auto;
+        }
+        .calendar.trinary.triangle .month-name,
+        .calendar.trinary.triangle .day-names .day {
+            line-height: 1.2em;
+            height: 1.2em;
+            }
+        .calendar.trinary.triangle .day-names .day {
+            width: 38px;
+            }
+
+    .calendar.trinary.triangle var {
+        margin: 0 0px 0 0;
+        border-top: 10px solid #D4ECFF;
+        border-left: 10px solid #D4ECFF;
+        font-size: 0px;
+        line-height: 0%;
+        width: 0px;
+        -moz-border-radius: 0;
+        }
+        .calendar.trinary.triangle var.zero {
+            font-size: 0;
+            padding: 0;
+            }
+    .calendar.trinary.triangle var.minus {
+        border: 0;
+        border-left: 10px solid #1393FF;
+        border-top: 10px solid #D4ECFF;
+        }
+
+    .calendar.trinary.triangle var.plus {
+        border: 0;
+        border-right: 10px solid #1393FF;
+        border-bottom: 10px solid #D4ECFF;
+        }
+
+        .calendar.trinary.triangle .year var {
+            border-top-width: 45px;
+            border-left-width: 45px;
+            }
+        .calendar.trinary.triangle .year var.minus {
+            border-left-width: 45px;
+            border-top-width: 45px;
+            }
+        .calendar.trinary.triangle .year var.plus {
+            border-right-width: 45px;
+            border-bottom-width: 45px;
+            }
+
+    .calendar.trinary.triangle .month-name {
+        margin: 0 0 10px;
+        }
+    .calendar.trinary.triangle .day.holyday {}
+    .calendar.trinary.triangle .day.holyday var {
+        }
+        .calendar.trinary.triangle .day.holyday var.minus {
+            border-color: #DEC1E8;
+            border-left: 10px solid #AE06E8;
+            }
+        .calendar.trinary.triangle .day.holyday var.plus {
+            border-color: #DEC1E8;
+            border-right-color: #AE06E8;
+            }
+        .calendar.trinary.triangle .day.holyday var.zero {
+            border-color: #DEC1E8;
+            }

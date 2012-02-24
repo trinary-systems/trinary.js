@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trinary Calendar</title>
+	<meta charset="utf-8"/>
+	<link href="trinary.calendar.css" media="screen" rel="stylesheet" type="text/css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="trinary.js"></script>
+	<script src="trinary.core.js"></script>
+	<script src="trinary.locale.js"></script>
+	<script src="trinary.locale.ru.js"></script>
+	<script src="trinary.calendar.js"></script>
+	<script>
+	$(function() {
+		locale = trinary.locale.ru;
+
+		var instance = $('#calendar_container');
+		var calendar_year = $('#calendar_year');
+		var calendar_style = $('#calendar_style');
+
+		function render() {
+			var style = calendar_style.val().split('/');
+			var options = { year : parseInt(calendar_year.val()), system : style[0], style : style[1] };
+			instance.html(trinary.calendar.render(options));
+		};
+
+		calendar_year.change(render);
+		calendar_style.change(render);
+		render();
+	});
+</script>
+</head>
+<body>
+
+<div class="calendar-params">
+Календарь на <select id="calendar_year" name="calendar_year"><option value="2011">2011</option>
+<option value="2012" selected="selected">2012</option>
+<option value="2013">2013</option></select> год в
+<select id="calendar_style" name="calendar_style"><option value="trinary">троичной симметричной</option>
+<option value="trinary/triangle">троичной симметричной (графический стиль)</option>
+<option value="nonary">девятеричной симметричной</option></select> системе
+</div>
+
+<div id="calendar_container"></div>
+
+© 2007—2012 Тринари
+</body>
+</html>
